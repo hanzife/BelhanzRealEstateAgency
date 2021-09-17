@@ -1,19 +1,21 @@
 $(document).ready(function () {
     //Random order Hero Cards on page load
     var cards = $(".ProfessionCards");
-    for (var i = 0; i < cards.length; i++) {
-        var target = Math.floor(Math.random() * cards.length - 1) + 1;
-        var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-        cards.eq(target).before(cards.eq(target2));
-    }
-    //Random order Top Right Image Every 2s
-    var images = ['construction.jpg', 'interiordesign.jpg', 'renovation.jpg', 'jason-briscoe-UV81E0oXXWQ-unsplash.jpg'];
+    // for (var i = 0; i < cards.length; i++) {
+    //     var target = Math.floor(Math.random() * cards.length - 1) + 1;
+    //     var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+    //     cards.eq(target).before(cards.eq(target2));
+    // }
+
+    // Random order Top Right Image Every 2s
+    // Images on TopRight Slider
+    var images = ['constructions.jpg', 'interiordesign.jpg', 'HeroSlide2.jpg', 'jason-briscoe-UV81E0oXXWQ-unsplash.jpg'];
     var index = 0;
 
     //auto change
     function nextBackground() {
         $('#background').css({ 'background-image': 'url(../Public/Images/' + images[Math.floor(Math.random() * images.length)] + ')' });
-        timer = setTimeout(nextBackground, 2000);
+        timer = setTimeout(nextBackground, 4000);
     }
     timer = setTimeout(nextBackground, 2000);
     $('#background').css('background', images[0]);
@@ -107,4 +109,29 @@ $(document).ready(function () {
                 }
             }
         });
+
+
+
+
+    /* Modal Form When Opening an Image */
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("clickedImage");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
 });
+
+
