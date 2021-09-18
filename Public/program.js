@@ -115,15 +115,57 @@ $(document).ready(function () {
 
     /* Modal Form When Opening an Image */
 
-    // Get the modal
+    // Get the modal from class
     var modal = document.getElementById("myModal");
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("clickedImage");
-    var captionText = document.getElementById("caption");
-    img.onclick = function () {
-        modal.style.display = "block";
+    var img = document.getElementsByClassName("clickedImage");
+
+    for (var i = 0; i < img.length; i++) {
+        //== Select *from Images wherename=swimingpool 
+        if (i == 0) {
+            img[0].onclick = function () {
+                modal.style.display = "block";
+                $('#WorkTitle').html("Construction de Piscine");
+                $('.ModalImage').eq(0).css({ 'background-image': 'url(Public/Images/Piscine1.png' });
+                $('.ModalImage').eq(1).css({ 'background-image': 'url(Public/Images/Piscine2.png' });
+                $('.ModalImage').eq(2).css({ 'background-image': 'url(Public/Images/Piscine3.png' });
+                $('.ModalImage').eq(3).css({ 'background-image': 'url(Public/Images/Piscine4.png' });
+                $('.ModalImage').eq(4).css({ 'background-image': 'url(Public/Images/Piscine5.png' });
+                $('.ModalImage').eq(5).css({ 'background-image': 'url(Public/Images/Piscine6.png' });
+                $('.ModalImage').eq(6).css({ 'background-image': 'url(Public/Images/Piscine7.png' });
+            }
+        }
+        if (i == 1) {
+            img[1].onclick = function () {
+                modal.style.display = "block";
+                $('#WorkTitle').html("Construction de Restaurant");
+                $('.ModalImage').eq(0).css({ 'background-image': 'url(Public/Images/Boucherie1.png' });
+                $('.ModalImage').eq(1).css({ 'background-image': 'url(Public/Images/Boucherie2.png' });
+                $('.ModalImage').eq(2).css({ 'background-image': 'url(Public/Images/Boucherie3.png' });
+                $('.ModalImage').eq(3).css({ 'background-image': 'url(Public/Images/Boucherie4.png' });
+                $('.ModalImage').eq(4).css({ 'background-image': 'url(Public/Images/Boucherie5.png' });
+                $('.ModalImage').eq(5).css({ 'background-image': 'url(Public/Images/Boucherie6.png' });
+                $('.ModalImage').eq(6).css({ 'background-image': 'url(Public/Images/Boucherie7.png' });
+            }
+        }
+        if (i == 2) {
+            img[2].onclick = function () {
+                modal.style.display = "block";
+                $('#WorkTitle').html("Construction de Bâtiments");
+                $('.ModalImage').eq(0).css({ 'background-image': 'url(Public/Images/batiments1.png' });
+                $('.ModalImage').eq(1).css({ 'background-image': 'url(Public/Images/batiments2.png' });
+                $('.ModalImage').eq(2).css({ 'background-image': 'url(Public/Images/batiments3.png' });
+                $('.ModalImage').eq(3).css({ 'background-image': 'url(Public/Images/batiments4.png' });
+                $('.ModalImage').eq(4).css({ 'background-image': 'url(Public/Images/batiments5.png' });
+                $('.ModalImage').eq(5).css({ 'background-image': 'url(Public/Images/batiments6.png' });
+                $('.ModalImage').eq(6).css({ 'background-image': 'url(Public/Images/batiments7.png' });
+            }
+        }
     }
+
+
+
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
