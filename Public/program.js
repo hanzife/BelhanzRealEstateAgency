@@ -159,9 +159,23 @@ $(document).ready(function () {
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-        window.open("../../index.html", "_self")
+        window.open("../../home.html", "_self")
 
     }
+
+
+    // Before & After Slider
+    const _slideInputs = document.querySelectorAll('.slideInput');
+    const _dragLines = document.querySelectorAll('.drag-line');
+    const _imgs = document.querySelectorAll('.img-2');
+
+    Array.prototype.slice.call(_slideInputs).forEach((slideInput, index) => {
+        slideInput.addEventListener('input', e => {
+            _dragLines[index].style.left = `${slideInput.value}%`;
+            _imgs[index].style.width = `${slideInput.value}%`;
+        });
+    });
+
 });
 
 
