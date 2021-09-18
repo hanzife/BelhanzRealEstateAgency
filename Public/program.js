@@ -125,41 +125,28 @@ $(document).ready(function () {
         //== Select *from Images wherename=swimingpool 
         if (i == 0) {
             img[0].onclick = function () {
-                modal.style.display = "block";
-                $('#WorkTitle').html("Construction de Piscine");
-                $('.ModalImage').eq(0).css({ 'background-image': 'url(Public/Images/Piscine1.png' });
-                $('.ModalImage').eq(1).css({ 'background-image': 'url(Public/Images/Piscine2.png' });
-                $('.ModalImage').eq(2).css({ 'background-image': 'url(Public/Images/Piscine3.png' });
-                $('.ModalImage').eq(3).css({ 'background-image': 'url(Public/Images/Piscine4.png' });
-                $('.ModalImage').eq(4).css({ 'background-image': 'url(Public/Images/Piscine5.png' });
-                $('.ModalImage').eq(5).css({ 'background-image': 'url(Public/Images/Piscine6.png' });
-                $('.ModalImage').eq(6).css({ 'background-image': 'url(Public/Images/Piscine7.png' });
+                window.open("src/Experiences/Piscine.html", "_self")
             }
         }
         if (i == 1) {
             img[1].onclick = function () {
-                modal.style.display = "block";
-                $('#WorkTitle').html("Construction de Restaurant");
-                $('.ModalImage').eq(0).css({ 'background-image': 'url(Public/Images/Boucherie1.png' });
-                $('.ModalImage').eq(1).css({ 'background-image': 'url(Public/Images/Boucherie2.png' });
-                $('.ModalImage').eq(2).css({ 'background-image': 'url(Public/Images/Boucherie3.png' });
-                $('.ModalImage').eq(3).css({ 'background-image': 'url(Public/Images/Boucherie4.png' });
-                $('.ModalImage').eq(4).css({ 'background-image': 'url(Public/Images/Boucherie5.png' });
-                $('.ModalImage').eq(5).css({ 'background-image': 'url(Public/Images/Boucherie6.png' });
-                $('.ModalImage').eq(6).css({ 'background-image': 'url(Public/Images/Boucherie7.png' });
+                window.open("src/Experiences/Boucherie.html", "_self")
+
+                // modal.style.display = "block";
+                // $('#WorkTitle').html("Construction de Restaurant");
+                // $('.ModalImage').eq(0).css({ 'background-image': 'url(Public/Images/Boucherie1.png' });
+                // $('.ModalImage').eq(1).css({ 'background-image': 'url(Public/Images/Boucherie2.png' });
+                // $('.ModalImage').eq(2).css({ 'background-image': 'url(Public/Images/Boucherie3.png' });
+                // $('.ModalImage').eq(3).css({ 'background-image': 'url(Public/Images/Boucherie4.png' });
+                // $('.ModalImage').eq(4).css({ 'background-image': 'url(Public/Images/Boucherie5.png' });
+                // $('.ModalImage').eq(5).css({ 'background-image': 'url(Public/Images/Boucherie6.png' });
+                // $('.ModalImage').eq(6).css({ 'background-image': 'url(Public/Images/Boucherie7.png' });
             }
         }
         if (i == 2) {
             img[2].onclick = function () {
-                modal.style.display = "block";
-                $('#WorkTitle').html("Construction de Bâtiments");
-                $('.ModalImage').eq(0).css({ 'background-image': 'url(Public/Images/batiments1.png' });
-                $('.ModalImage').eq(1).css({ 'background-image': 'url(Public/Images/batiments2.png' });
-                $('.ModalImage').eq(2).css({ 'background-image': 'url(Public/Images/batiments3.png' });
-                $('.ModalImage').eq(3).css({ 'background-image': 'url(Public/Images/batiments4.png' });
-                $('.ModalImage').eq(4).css({ 'background-image': 'url(Public/Images/batiments5.png' });
-                $('.ModalImage').eq(5).css({ 'background-image': 'url(Public/Images/batiments6.png' });
-                $('.ModalImage').eq(6).css({ 'background-image': 'url(Public/Images/batiments7.png' });
+                window.open("src/Experiences/Batiment.html", "_self")
+
             }
         }
     }
@@ -172,7 +159,8 @@ $(document).ready(function () {
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-        modal.style.display = "none";
+        window.open("../../index.html", "_self")
+
     }
 });
 
