@@ -149,6 +149,13 @@ $(document).ready(function () {
 
             }
         }
+        if (i == 3) {
+            img[3].onclick = function () {
+                window.open("src/Experiences/Renovation.html", "_self")
+
+            }
+        }
+
     }
 
 
@@ -159,7 +166,7 @@ $(document).ready(function () {
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-        window.open("../../home.html", "_self")
+        window.open("../../index.html", "_self")
 
     }
 
