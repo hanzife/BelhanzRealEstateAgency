@@ -168,11 +168,20 @@ $(document).ready(function () {
     const _slideInputs = document.querySelectorAll('.slideInput');
     const _dragLines = document.querySelectorAll('.drag-line');
     const _imgs = document.querySelectorAll('.img-2');
+    const _labelAfter = document.querySelectorAll('.bal-afterPosition');
+
 
     Array.prototype.slice.call(_slideInputs).forEach((slideInput, index) => {
         slideInput.addEventListener('input', e => {
             _dragLines[index].style.left = `${slideInput.value}%`;
             _imgs[index].style.width = `${slideInput.value}%`;
+            if (_imgs[index].style.width < `${20}px`) {
+                _labelAfter[index].style.display = "none";
+            }
+            else {
+                _labelAfter[index].style.display = "block";
+
+            }
         });
     });
 
