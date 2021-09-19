@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     // Random order Top Right Image Every 2s
     // Images on TopRight Slider
-    var images = ['constructions.jpg', 'interiordesign.jpg', 'HeroSlide2.jpg', 'jason-briscoe-UV81E0oXXWQ-unsplash.jpg'];
+    var images = ['constructions.jpg', 'heroSlide1.png', 'HeroSlide2.jpg', 'jason-briscoe-UV81E0oXXWQ-unsplash.jpg'];
     var index = 0;
 
     //auto change
