@@ -155,6 +155,12 @@ $(document).ready(function () {
 
             }
         }
+        if (i == 4) {
+            img[4].onclick = function () {
+                window.open("src/Experiences/buildingwalls.html", "_self")
+
+            }
+        }
 
     }
 
